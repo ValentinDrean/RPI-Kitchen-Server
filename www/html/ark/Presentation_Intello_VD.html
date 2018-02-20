@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Rapport de stage Certification Concepteur Développeur Informatique</title>
+
+	<meta name="description" content="Stage effectué à Arkamys Paris">
+	<meta name="author" content="Valentin Drean">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/revealembed.css">
+	<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<style media="screen">
+	.reveal h5
+	{
+		font-size: 0.7em;
+	}
+	.reveal h6
+	{
+		font-size: 0.4em;
+	}
+	.reveal section img
+	{
+		border: 0px solid #222;
+	}
+	#titleImg
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0;
+	}
+
+	#merci
+	{
+		color:white;
+		text-shadow:2px 2px 2px #aaa;
+	}
+
+	/*.slides {
+	position: absolute;
+	top: 0;
+	left: 0;
+	}*/
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+
+		<div class="slides">
+			<section>
+				<h3>Présentation du Programme <br> « Intello Noise Monitoring »</h3>
+				<h5>Application Android d’envoi de données de bruit GPS et affichage des données sur site Web</h5>
+				<img src="img/ordi_tel.png" height="120" alt="">
+				<img src="img/afpa_full.png" height="120" alt="">
+				<img src="img/logo-arkamys.png" height="120" alt="">
+				<h6>Certification Concepteur Développeur Informatique 2017 Paris</h6>
+				<h6>Stage effectué à « Arkamys », entreprise de traitement numérique du signal</h6>
+				<p>
+					<small>
+						Équipe ( AudioDevices ) <br>
+						Projet ( Développement Intello ) <br>
+						Sous la direction de ( Benoit Piedallu & Frédéric Amadu ) <br>
+						<br>
+						Réalisé avec <a href="http://revealjs.com">Reveal.JS</a> par <a href="http://valentin.drean.xyz">Valentin Drean</a></small>
+					</p>
+				</section>
+
+				<section id="fragments">
+					<img src="img/logo-arkamys.png" alt="">
+					<br>
+					<h5>La société Arkamys, fondée à Paris (France) en 1998, est une entreprise spécialisée dans le traitement numérique du signal.</h5>
+					<h4>Le projet Intello</h4>
+					<ul>
+						<li class="fragment">4 ans de de recherches d'amélioration auditive</li>
+						<li class="fragment">Solutions algorithmiques</li>
+						<li class="fragment">Oreillettes d'amélioration auditive</li>
+						<li class="fragment">Algorithmes adaptatifs</li>
+						<!-- Parler de ma connaissance de l'audiovisuel, puis de mon passage chez Sonic Émotion -->
+					</ul>
+				</section>
+
+				<section id="fragments">
+					<h4>Ma mission</h4>
+					<ul>
+						<li class="fragment">Concevoir une application Android</li>
+						<li class="fragment">Concevoir un client Web</li>
+						<ul>
+							<li class="fragment">Carte utilisateur</li>
+							<li class="fragment">Graphiques d'activité sonore</li>
+							<li class="fragment">Carte invité <small>(données de la communauté)</small></li>
+						</ul>
+						<li class="fragment">Concevoir un Web Service <small>(guichet client <===> données)</small></li>
+						<li class="fragment">Une base de donnée</li>
+					</ul>
+					<img class="fragment" src="img/ordi_tel.png" height="120" alt="">
+					<img class="fragment" src="img/ordi_tel.png" height="120" alt="">
+				</section>
+
+				<section id="fragments">
+					<h3>SOMMAIRE</h3>
+					<br>
+					<ul>
+						<li class="fragment">Cas d'utilisations & Screenshots Web <small>(8 slides)</small></li>
+						<li class="fragment">Cas d'utilisations & Screenshots Android <small>(4 slides)</small></li>
+						<li class="fragment">Architecture du programme <small>(3-TIERS)</small></li>
+						<li class="fragment">Les données <small>(1 slide)</small></li>
+						<li class="fragment">Client léger Web <small>(3 slides)</small></li>
+						<li class="fragment">Client lourd Android <small>(2 slides)</small></li>
+						<li class="fragment">Web Service <small>(1 slide)</small></li>
+					</ul>
+				</section>
+
+				<section>
+					<section data-background="img/WEB/USE_CASE/noise_full_map.png" data-background-size="80%" class="stretch">
+						<h5 id="titleImg" >Cas d'utilisations Carte Invité</h5>
+					</section>
+
+					<section data-background="img/WEB/Screenshots/map_accueil.PNG" data-background-size="80%" class="stretch">
+						<h5 id="titleImg" >Screenshot Carte Invité</h5>
+					</section>
+
+					<section data-background="img/WEB/Screenshots/map_zoom3_hide_account.PNG" data-background-size="80%" class="stretch">
+						<h5 id="titleImg" >Screenshot Carte Invité - Zoom</h5>
+					</section>
+
+					<section data-background="img/WEB/USE_CASE/noise_map_logged.png" data-background-size="80%" class="stretch">
+						<h5 id="titleImg" >Cas d'utilisations Carte Utilisateur</h5>
+					</section>
+
+					<section data-background="img/WEB/Screenshots/map_login_jeong.PNG" data-background-size="80%" class="stretch">
+						<h5 id="titleImg" >Screenshot Connexion Utilisateur Carte</h5>
+					</section>
+
+					<section data-background="img/WEB/Screenshots/map_logged_jeong_zoom2.png" data-background-size="80%" class="stretch">
+						<h5 id="titleImg">Screenshot Utilisateur Connecté Carte</h5>
+					</section>
+
+					<section data-background="img/WEB/USE_CASE/noise_chart_logged.png" data-background-size="80%" class="stretch">
+						<h5 id="titleImg" >Cas d'utilisations Diagramme Utilisateur</h5>
+					</section>
+
+					<!-- <section data-background="img/WEB/Screenshots/chart_logged_loane_no_noise.PNG" data-background-size="80%" class="stretch">
+					<h5 id="titleImg" >Screenshot Diagramme - No noise today !</h5>
+				</section> -->
+
+				<section data-background="img/WEB/Screenshots/chart_logged_loane_week.PNG" data-background-size="80%" class="stretch">
+					<h5 id="titleImg" >Screenshot Courbes de bruit - Semaine</h5>
+				</section>
+
+				<section data-background="img/WEB/Screenshots/chart_logged_loane_month.PNG" data-background-size="80%" class="stretch">
+					<h5 id="titleImg" >Screenshot Courbes de bruit - Mois</h5>
+				</section>
+			</section>
+
+			<section>
+				<section data-background="img/ANDROID/use_case_android_login.png" data-background-size="80%" class="stretch">
+					<h5 id="titleImg" >Client Android - Cas d'utilisations</h5>
+				</section>
+
+				<section data-background="img/ANDROID/Screenshots/main_full.png" data-background-size="80%" class="stretch">
+					<h5 id="titleImg" >Client Android - Screenshots login</h5>
+				</section>
+
+				<section data-background="img/ANDROID/use_case_android_main.png" data-background-size="80%" class="stretch">
+					<h5 id="titleImg" >Client Android - Cas d'utilisations noise</h5>
+				</section>
+
+				<section data-background="img/ANDROID/Screenshots/login_full.png" data-background-size="80%" class="stretch">
+					<h5 id="titleImg" >Client Android - Screenshots login</h5>
+				</section>
+			</section>
+
+			<section data-background="img/very_nice_diagramFINAL.png" data-background-size="60%">
+				<h5 id="titleImg" >Architecture du programme <small>(3-TIERS)</small></h5>
+			</section>
+
+			<section data-background="img/BDD/diag_mcd_sql_v2_prez.png" data-background-size="80%">
+				<h5 id="titleImg" >Modèle Conceptuel Des Données</h5>
+			</section>
+			<section>
+
+				<section data-background="img/WEB/Screenshots/marker_cluster_ok.png" data-background-size="60%" class="stretch">
+					<h5 id="titleImg">Client Web - Exemple Leaflet avec groupes sans modification</h5>
+				</section>
+
+				<section>
+					<h5 id="titleImg">Client Web - Leaflet.markercluster & GetAverageCluster(allChildrenMarkers)</h5>
+					<br>
+					<h4></h4>
+					<pre class="stretch" width><code data-trim data-noescape>
+						function getAverageCluster(<mark>allChildrenMarkers</mark>)
+						{
+							var numberPattern = /\d+/g;
+							// need to parse _popup._content to get mic value
+							// if we don't want to ajax again.
+							var totalMic = 0;
+							var avgProbMic = 0;
+							var stringInputLeafletData;
+							for (var i = 0; i < allChildrenMarkers.length; i++)
+							{
+								stringInputLeafletData = allChildrenMarkers[i]._popup._content;
+								totalMic += parseInt(stringInputLeafletData.match(numberPattern)[1]);
+							}
+							avgProbMic = totalMic / allChildrenMarkers.length;
+							<mark>return avgProbMic.toFixed(2);</mark>
+						}
+					</code></pre>
+				</section>
+
+				<section data-background="img/WEB/Screenshots/map_logged_jeong_zoom2.png" data-background-size="80%" class="stretch">
+					<h5 id="titleImg">Client Web - Exemple Moyenne par groupe de bruits</h5>
+				</section>
+
+				<section data-background="img/WEB/seq/diag_seq_web_get_noise.png" data-background-size="60%" class="stretch">
+					<h5 id="titleImg">Client Web - Diagramme de Séquence Chargement Carte</h5>
+				</section>
+			</section>
+		</section>
+
+		<section>
+			<section data-background="img/ANDROID/diag_class_android_minified_minified.png" data-background-size="80%">
+				<h5 id="titleImg">Client Android - Diagramme de Classe <strong>(EXTRAIT)</strong></h5>
+			</section>
+			<!-- <section data-background="img/ANDROID/diag_seq_android_login.png" data-background-size="60%">
+			<h5 id="titleImg">Client Android - Diagramme de Séquence LoginActivity</h5>
+		</section> -->
+		<section data-background="img/ANDROID/diag_seq_andro_noise_v7.png" data-background-size="60%">
+			<h5 id="titleImg">Client Android - Diagramme de Séquence Envoi de Données de Bruit</h5>
+		</section>
+	</section>
+
+	<section data-background="img/REST/diag_seq_rest_NOISE_ANDROID_v4.png" data-background-size="60%" class="stretch">
+		<h5 id="titleImg">Web Service - Create Noise Rest</h5>
+	</section>
+
+	<section data-background="img/casqonnect_alpha_empty.png" data-background-size="100%">
+		<br><br><br><br>
+		<h2 id="merci"> Merci pour votre <br>attention !</h2>
+		<br>
+		<!-- <h3 id="merci"><a style="text-decoration: none;color: white!important;" href="https://intello.arkamys.com">Intello Website Noise Monitoring</a> </h3> -->
+	</section>
+</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+// More info https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+	controls: true,
+	progress: true,
+	history: true,
+	center: false,
+
+	transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+	// More info https://github.com/hakimel/reveal.js#dependencies
+	dependencies: [
+		{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		{ src: 'plugin/search/search.js', async: true },
+		{ src: 'plugin/zoom-js/zoom.js', async: true },
+		{ src: 'plugin/notes/notes.js', async: true }
+	]
+});
+Reveal.configure({ slideNumber: true });
+Reveal.configure({ slideNumber: 'c/t' });
+</script>
+</body>
+</html>
